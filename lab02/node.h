@@ -1,19 +1,20 @@
-#ifdef NODE_H
+#ifndef NODE_H
 #define NODE_H
 
-struct Node{
+struct Node {
     int data;
     struct Node* next;
 };
 
-struct Node* builOneTwoThree();
+int length(struct Node* head);
+void push(struct Node** headRef, int data);
+struct Node* BuildOneTwoThree(void);
 
-int length(struct Node*);
-
-int count(struct Node*, int);
-
-void getNth(struct Node*, int);
-
-void deleteList(struct Node**);
+int count(struct Node* head, int value);
+int getNth(struct Node* head, int index);
+void deleteList(struct Node** headRef);
+int pop(struct Node** headRef);
+void insertNth(struct Node** headRef, int index, int data);
+void append(struct Node** aRef, struct Node** bRef);
 
 #endif
